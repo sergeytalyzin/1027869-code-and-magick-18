@@ -1,22 +1,4 @@
 'use strict';
-
-
-var fireballSize = 22;
-var getFireballSpeed = function (left) {
-  return left ? 5 : 2;
-};
-var wizardSpeed = 3;
-var wizardWidth = 70;
-var getWizardHeight = function () {
-  return 1.337 * wizardWidth;
-};
-var getWizardX = function (width) {
-  return width / 2 - wizardWidth / 2;
-};
-var getWizardY = function (height) {
-  return height / 2 - getWizardHeight() / 2;
-};
-
 var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var TEXT_X = 130;
@@ -42,7 +24,6 @@ var getMaxElement = function (arr) {
       maxElement = arr[i];
     }
   }
-
   return maxElement;
 };
 
@@ -54,7 +35,6 @@ window.renderStatistics = function (ctx, players, times) {
   ctx.font = '16px PT Mono';
   ctx.fillText('Ура вы победили!', CLOUD_X + FONT_GAP + GAP, CLOUD_Y + FONT_GAP);
   ctx.fillText('Список результатов:', CLOUD_X + FONT_GAP + GAP, CLOUD_Y + FONT_GAP + FONT_GAP);
-
 
   var maxTime = getMaxElement(times);
 
