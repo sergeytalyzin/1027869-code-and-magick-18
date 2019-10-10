@@ -131,7 +131,8 @@ wizardEyes.addEventListener('click', function () {
 });
 
 wizardFireBall.addEventListener('click', function () {
-  wizardFireBall.style.backgroundColor = generateFireBall(FIREBALL_COLORS);
-  fireBallInput.value = wizardFireBall.style.backgroundColor;
+  var colorBall = generateFireBall(FIREBALL_COLORS);
+  wizardFireBall.style.backgroundColor = colorBall;
+  fireBallInput.value = colorBall;
 });
 
