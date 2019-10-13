@@ -17,8 +17,8 @@ var getRandom = function (number) {
   return Math.round(Math.random() * number);
 };
 
-var generateFireBall = function (color) {
-  return color[getRandom(4)];
+var generateFireBall = function () {
+  return FIREBALL_COLORS[getRandom(4)];
 };
 
 var generateName = function (name, surname) {
@@ -121,17 +121,19 @@ setupClose.addEventListener('keydown', function (evt) {
 });
 
 wizardCoat.addEventListener('click', function () {
-  wizardCoat.style.fill = generateColor(COAT_COLORS);
-  inputCoat.value = wizardCoat.style.fill;
+  var colorCoat = generateColor(COAT_COLORS);
+  wizardCoat.style.fill = colorCoat;
+  inputCoat.value = colorCoat;
 });
 
 wizardEyes.addEventListener('click', function () {
-  wizardEyes.style.fill = generateEyesColor(EYES_COLORS);
-  inputEyes.value = wizardEyes.style.fill;
+  var colorEyes = generateEyesColor(EYES_COLORS);
+  wizardEyes.style.fill = colorEyes;
+  inputEyes.value = colorEyes;
 });
 
 wizardFireBall.addEventListener('click', function () {
-  var colorBall = generateFireBall(FIREBALL_COLORS);
+  var colorBall = generateFireBall();
   wizardFireBall.style.backgroundColor = colorBall;
   fireBallInput.value = colorBall;
 });
