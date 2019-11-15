@@ -21,11 +21,15 @@
     return color[getRandom(4)];
   };
   var wizards = [];
-
+  var test = [];
   var succesHandler = function (data) {
     wizards = data;
+    test = [5,5];
     updateWizards();
   };
+  document.addEventListener('click', function () {
+    console.log(test);
+  });
   var getRank = function (wizard) {
     var rank = 0;
 
